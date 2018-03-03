@@ -1,4 +1,4 @@
-# Pilosa Cluster test with Java Client
+# Pilosa Test with Java Client
 
 ## Requirements
 
