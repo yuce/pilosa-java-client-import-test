@@ -1,4 +1,6 @@
 .PHONY: build
 
 build:
-	mvn package
+	mvn clean compile && \
+	rm -rf deploy_package/classes && \
+	cp -r target/classes deploy_package

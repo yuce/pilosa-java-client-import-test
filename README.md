@@ -8,20 +8,14 @@
 ## Building
 
 ```
-mvn package
+make
 ```
-
-That should create `target/pilosa-tst-1.0-SNAPSHOT.jar`
 
 ## Running
 
-`java -jar pilosa-tst-1.0-SNAPSHOT.jar PILOSA_SERVER_ADDRESS NUMBER_OF_BITS`
-
-Imports `NUMBER_OF_BITS + 1` bits which have row IDs and column IDs set to index. E.g.,
 ```
-0,0
-1,1
-...
-100,100
+cd deploy_package
+./run.sh PILOSA_ADDR MAX_ROW_ID MAX_COLUMN_ID BATCH_SIZE random [THREAD_COUNT [SLICE WIDTH]]
 ```
 
+`THREAD_COUNT` defaults to the number of CPUs and `SLICE_WIDTH` defaults to the default Pilosa server slice width.
